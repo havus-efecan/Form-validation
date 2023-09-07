@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="form">    
+    <ul>
+        <li>
+            <label for="email">Email</label>
+            <input  required type="email" id="email">
+        </li>
+        <li>
+            <label for="country">Country</label>
+            <input required maxlength="20" type="text" id="country">
+        </li>
+        <li>
+            <label for="zip">Zip code</label>
+            <input  pattern="^[A-Z1-9]{3}(( )?|(-?))[A-Z1-9]{3}$" type="text" id="zip" required>
+        </li>
+        <li>
+            <label for="password">Password</label>
+            <input required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!])(?!.*\s).{8,}$" minlength="8" pattern="" type="password" id="password">
+        </li>
+        <li>
+            <label for="confirm">Confirm password</label>
+            <input required minlength="8" type="password" id="confirm">
+        </li>
+    </ul>
+    <button type="submit">Submit</button>
+    </form>
+   
+    <script src="script.js"></script>
+</body>
+</html>
